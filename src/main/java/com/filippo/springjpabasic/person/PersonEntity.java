@@ -1,8 +1,5 @@
 package com.filippo.springjpabasic.person;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,8 +7,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "person")
-@Data
-@NoArgsConstructor
 public class PersonEntity {
 
     @Id
@@ -20,4 +15,22 @@ public class PersonEntity {
 
     private String name;
 
+    public PersonEntity() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
